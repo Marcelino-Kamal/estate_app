@@ -1,3 +1,5 @@
+
+print("Estate App Hooks Loaded!")
 app_name = "estate_app"
 app_title = "Estate App"
 app_publisher = "Marco"
@@ -6,20 +8,20 @@ app_email = "marconaoum@gmail.com"
 app_license = "mit"
 
 # Apps
-# ------------------
+
 
 # required_apps = []
 
 # Each item in the list will be shown as an app in the apps page
-# add_to_apps_screen = [
-# 	{
-# 		"name": "estate_app",
-# 		"logo": "/assets/estate_app/logo.png",
-# 		"title": "Estate App",
-# 		"route": "/estate_app",
-# 		"has_permission": "estate_app.api.permission.has_app_permission"
-# 	}
-# ]
+#add_to_apps_screen = [
+#	{
+	#	"name": "estate_app",
+#		"logo": "/assets/estate_app/imges/logo.jpeg",
+ 	#	"title": "Estate App",
+	#	"route": "/estate_app",
+		#"has_permission": "estate_app.api.permission.has_app_permission"
+	#}
+ #]
 
 # Includes in <head>
 # ------------------
