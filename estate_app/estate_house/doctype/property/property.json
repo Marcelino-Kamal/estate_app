@@ -9,14 +9,19 @@
   "property_name",
   "address",
   "type",
+  "property_price",
+  "discount",
   "column_break_rb8n",
   "image",
-  "agent",
+  "agent_email",
+  "agent_name",
   "status",
   "section_break_dzcn",
   "description",
   "section_break_lu6l",
-  "amenities"
+  "amenities",
+  "pricing_section",
+  "grant_total"
  ],
  "fields": [
   {
@@ -25,12 +30,6 @@
    "in_list_view": 1,
    "label": "Property Name",
    "reqd": 1
-  },
-  {
-   "fieldname": "agent",
-   "fieldtype": "Link",
-   "label": "Agent",
-   "options": "Agent"
   },
   {
    "fieldname": "address",
@@ -72,6 +71,8 @@
   {
    "fieldname": "type",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Type",
    "options": "Property Type",
    "reqd": 1
@@ -82,12 +83,49 @@
    "label": "Status",
    "options": "\nSale\nRent\nLease",
    "reqd": 1
+  },
+  {
+   "depends_on": "agent_email",
+   "fetch_from": "agent_email.agent_name",
+   "fetch_if_empty": 1,
+   "fieldname": "agent_name",
+   "fieldtype": "Read Only",
+   "label": "Agent Name"
+  },
+  {
+   "fieldname": "agent_email",
+   "fieldtype": "Link",
+   "label": "Agent Email",
+   "options": "Agent"
+  },
+  {
+   "fieldname": "property_price",
+   "fieldtype": "Currency",
+   "label": "Property Price",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "discount",
+   "fieldtype": "Percent",
+   "label": "Discount"
+  },
+  {
+   "fieldname": "pricing_section",
+   "fieldtype": "Section Break",
+   "label": "Pricing"
+  },
+  {
+   "fieldname": "grant_total",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Grant Total"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-07-15 17:21:05.308287",
+ "modified": "2025-07-22 15:11:27.948503",
  "modified_by": "Administrator",
  "module": "Estate House",
  "name": "Property",
