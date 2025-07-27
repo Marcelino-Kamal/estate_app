@@ -139,13 +139,19 @@ app_license = "mit"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+	# "*": {
+	# 	"on_update": "method",
+	# 	"on_cancel": "method",
+	# 	"on_trash": "method"
+	# },
+    "Property": {
+            "validate":"estate_app.estate_house.doctype.property.event.validate",
+            "on_update":"estate_app.estate_house.doctype.property.event.on_update",
+            "after_insert":"estate_app.estate_house.doctype.property.event.afterInsert"
+		
+	}
+}
 
 # Scheduled Tasks
 # ---------------

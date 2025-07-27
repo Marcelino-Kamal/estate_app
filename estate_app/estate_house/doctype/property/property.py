@@ -12,39 +12,39 @@ class Property(Document):
        frappe.msgprint(msg="Successfully Updated to database",title="Success",indicator='green')
        
 	#Validate
-   def validate(self):
-        if self.type == "Flat":
-            ##Check in real-time the inputs
-            for row in self.get("amenities"):
-                if row.amenity == "Outdoor Kitchens":
-                    frappe.throw(
-                        title='Error',
-                        msg=f"Property of type: <b>{self.type}</b> can't have: <b>{row.amenity}</b>"
-                    )
+#    def validate(self):
+#         if self.type == "Flat":
+#             ##Check in real-time the inputs
+#             for row in self.get("amenities"):
+#                 if row.amenity == "Outdoor Kitchens":
+#                     frappe.throw(
+#                         title='Error',
+#                         msg=f"Property of type: <b>{self.type}</b> can't have: <b>{row.amenity}</b>"
+#                     )
          
-         #Sql
-            # amenity = frappe.db.sql(
-            #     """
-            #     SELECT amenity  
-            #     FROM `tabProperty Amenity Details` 
-            #     WHERE parent=%s AND parenttype='Property' AND amenity='Outdoor Kitchens'
-            #     """, 
-            #     (self.name,), 
-            #     as_dict=True
-            # )
+#          #Sql
+#             # amenity = frappe.db.sql(
+#             #     """
+#             #     SELECT amenity  
+#             #     FROM `tabProperty Amenity Details` 
+#             #     WHERE parent=%s AND parenttype='Property' AND amenity='Outdoor Kitchens'
+#             #     """, 
+#             #     (self.name,), 
+#             #     as_dict=True
+#             # )
             
-            # if(amenity):
-            #     frappe.throw(title='Error',
-            #                      msg=f"Property of type: <b>{self.type}</b> can't have : <b>{amenity[0].amenity}</b>")
+#             # if(amenity):
+#             #     frappe.throw(title='Error',
+#             #                      msg=f"Property of type: <b>{self.type}</b> can't have : <b>{amenity[0].amenity}</b>")
                 
-          #  for x in self.amenities:
-          #      if(x.amenity == "Outdoor Kitchens"):
-          #          frappe.throw(title='Error',
-          #                       msg=f"Property of type: <b>{self.type}</b> can't have : <b>{x.amenity}</b>")
+#           #  for x in self.amenities:
+#           #      if(x.amenity == "Outdoor Kitchens"):
+#           #          frappe.throw(title='Error',
+#           #                       msg=f"Property of type: <b>{self.type}</b> can't have : <b>{x.amenity}</b>")
 
 
-def after_insert(self):
-       frappe.msgprint(msg="Successfully added to datbase",title="Success",indicator='green')
+# def after_insert(self):
+#        frappe.msgprint(msg="Successfully added to datbase",title="Success",indicator='green')
        
             
                 

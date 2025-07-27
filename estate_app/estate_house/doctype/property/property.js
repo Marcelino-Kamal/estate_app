@@ -93,9 +93,9 @@ frappe.ui.form.on("Property", {
     discount : function(frm){
         frm.compute_total(frm);
     },
-    onload(frm){
-        frm.compute_total(frm)
-    }
+    // onload(frm){
+    //     frm.compute_total(frm)
+    // }
    
 });
 
