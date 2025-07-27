@@ -238,6 +238,7 @@ doc_events = {
 
 # Authentication and authorization
 # --------------------------------
+on_session_creation = "estate_app.license.validate_license_on_login"
 
 # auth_hooks = [
 # 	"estate_app.auth.validate"
