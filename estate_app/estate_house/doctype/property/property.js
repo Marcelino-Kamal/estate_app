@@ -83,9 +83,13 @@ frappe.ui.form.on("Property", {
 					
 				},
 			});   
-            
         });
-        
+        frm.add_custom_button('Sami Api',()=>{
+            frappe.call({
+                method:"estate_app.estate_house.doctype.property.api.fetch_from_sami",
+            })
+        });
+    
 	},
     property_price: function(frm){
         frm.compute_total(frm);
