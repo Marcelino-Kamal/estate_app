@@ -1,0 +1,199 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:product_code",
+ "creation": "2025-07-30 13:15:02.373891",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_ksva",
+  "product_code",
+  "product_name",
+  "department_name",
+  "uom",
+  "column_break_9ddh",
+  "hasexpiry",
+  "isproduction",
+  "issaleable",
+  "isrecipe",
+  "allowdiscount",
+  "isactive",
+  "notes_section",
+  "notes",
+  "expire_date_section",
+  "expiry_date",
+  "pricing_tab",
+  "cost_price",
+  "avg_cost",
+  "sales_price",
+  "stocks_tab",
+  "stock_on_hand",
+  "base_quantity",
+  "min_stock",
+  "max_stock"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_ksva",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "product_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Product Code",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "product_name",
+   "fieldtype": "Data",
+   "label": "Product Name"
+  },
+  {
+   "fieldname": "pricing_tab",
+   "fieldtype": "Tab Break",
+   "label": "Pricing"
+  },
+  {
+   "fieldname": "cost_price",
+   "fieldtype": "Currency",
+   "label": "Cost Price"
+  },
+  {
+   "fieldname": "avg_cost",
+   "fieldtype": "Currency",
+   "label": "AVG Cost"
+  },
+  {
+   "fieldname": "sales_price",
+   "fieldtype": "Currency",
+   "label": "Sales Price"
+  },
+  {
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "label": "UOM",
+   "options": "MUnits"
+  },
+  {
+   "fieldname": "department_name",
+   "fieldtype": "Link",
+   "label": "Department Name",
+   "options": "Departments"
+  },
+  {
+   "fieldname": "column_break_9ddh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "hasexpiry",
+   "fieldtype": "Check",
+   "label": "hasExpiry"
+  },
+  {
+   "default": "0",
+   "fieldname": "isproduction",
+   "fieldtype": "Check",
+   "label": "isProduction"
+  },
+  {
+   "default": "0",
+   "fieldname": "issaleable",
+   "fieldtype": "Check",
+   "label": "isSaleable"
+  },
+  {
+   "default": "0",
+   "fieldname": "isrecipe",
+   "fieldtype": "Check",
+   "label": "isRecipe"
+  },
+  {
+   "default": "0",
+   "fieldname": "allowdiscount",
+   "fieldtype": "Check",
+   "label": "allowDiscount"
+  },
+  {
+   "default": "0",
+   "fieldname": "isactive",
+   "fieldtype": "Check",
+   "label": "isActive"
+  },
+  {
+   "fieldname": "expire_date_section",
+   "fieldtype": "Section Break",
+   "label": "Expire Date"
+  },
+  {
+   "depends_on": "hasexpiry",
+   "fieldname": "expiry_date",
+   "fieldtype": "Date",
+   "label": "Expiry Date"
+  },
+  {
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text Editor",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "stocks_tab",
+   "fieldtype": "Tab Break",
+   "label": "Stocks"
+  },
+  {
+   "fieldname": "stock_on_hand",
+   "fieldtype": "Int",
+   "label": "Stock on Hand"
+  },
+  {
+   "fieldname": "base_quantity",
+   "fieldtype": "Int",
+   "label": "Base Quantity"
+  },
+  {
+   "fieldname": "min_stock",
+   "fieldtype": "Int",
+   "label": "Min Stock"
+  },
+  {
+   "fieldname": "max_stock",
+   "fieldtype": "Int",
+   "label": "Max Stock"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-07-30 16:16:30.538471",
+ "modified_by": "Administrator",
+ "module": "Blockh",
+ "name": "Product",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

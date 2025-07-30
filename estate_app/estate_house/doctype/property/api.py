@@ -16,7 +16,7 @@ def fetch_from_sami():
             frappe.msgprint(f"Hello this data: {data}")
             return data
         else:
-            frappe.throw("Failed to Fetch data")
+            frappe.throw("Failed to Fetch data,Check server Connection")
     except Exception as e:
         frappe.log_error(frappe.get_traceback(), "API Fetch Error")
         frappe.throw("Something went wrong while fetching data.")
