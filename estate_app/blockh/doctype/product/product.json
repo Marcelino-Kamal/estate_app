@@ -7,6 +7,7 @@
  "engine": "InnoDB",
  "field_order": [
   "section_break_ksva",
+  "id",
   "product_code",
   "product_name",
   "department_name",
@@ -16,17 +17,20 @@
   "isproduction",
   "issaleable",
   "isrecipe",
-  "allowdiscount",
   "isactive",
   "notes_section",
   "notes",
   "expire_date_section",
   "expiry_date",
   "pricing_tab",
+  "pricing_section",
   "cost_price",
+  "allowdiscount",
   "avg_cost",
   "sales_price",
+  "discount",
   "stocks_tab",
+  "stocks_section",
   "stock_on_hand",
   "base_quantity",
   "min_stock",
@@ -35,7 +39,8 @@
  "fields": [
   {
    "fieldname": "section_break_ksva",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "Product Details"
   },
   {
    "fieldname": "product_code",
@@ -167,12 +172,40 @@
    "fieldname": "max_stock",
    "fieldtype": "Int",
    "label": "Max Stock"
+  },
+  {
+   "fieldname": "pricing_section",
+   "fieldtype": "Section Break",
+   "label": "Pricing"
+  },
+  {
+   "fieldname": "stocks_section",
+   "fieldtype": "Section Break",
+   "label": "Stocks"
+  },
+  {
+   "fieldname": "id",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Id",
+   "non_negative": 1,
+   "print_hide": 1,
+   "report_hide": 1
+  },
+  {
+   "depends_on": "allowdiscount",
+   "fieldname": "discount",
+   "fieldtype": "Percent",
+   "label": "Discount",
+   "precision": "0"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-07-30 16:16:30.538471",
+ "modified": "2025-07-31 14:11:13.477618",
  "modified_by": "Administrator",
  "module": "Blockh",
  "name": "Product",

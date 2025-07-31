@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{department_name}-{##}",
+ "autoname": "field:department_name",
  "creation": "2025-07-30 14:08:57.007254",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -17,13 +17,14 @@
   {
    "fieldname": "department_name",
    "fieldtype": "Data",
-   "label": "Department Name"
+   "label": "Department Name",
+   "unique": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-07-30 14:21:31.301843",
+ "modified": "2025-07-31 09:24:48.726938",
  "modified_by": "Administrator",
  "module": "Blockh",
  "name": "Departments",
