@@ -44,7 +44,6 @@ def sync_all():
 	inserted=[]
 	for data in products:
 		res = save_product(data)
-		inserted.append(res["docname"])
 	return  {
         "message": f"{len(inserted)} products synced successfully.",
         "products": inserted

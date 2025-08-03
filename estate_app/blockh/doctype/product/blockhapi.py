@@ -18,7 +18,7 @@ def getProductById(id):
 frappe.whitelist()
 def getProducts():
     try:
-        response = requests.get(f"https://60059fcde713.ngrok-free.app/api/Products/")
+        response = requests.get(f"https://c2977c8a684b.ngrok-free.app/api/Products")
         if response.status_code ==200:
             data = response.json()
             frappe.msgprint("Data Received successfully")

@@ -24,6 +24,17 @@ frappe.ui.form.on("Product", {
 				});
 			},"Enter Product ID");
 		});
-		frm.add_custom_button("Get ALL Products")
+		frm.add_custom_button("Get ALL Products",()=>{
+			frappe.call({
+				method:'estate_app.blockh.doctype.product.services.sync_all',
+				callback: function(r){
+					if(!r.exc){
+						frappe.msgprint("Huge Products incoming TAKE CARE!!!!")
+					}else{
+						frappe.throw("Something aint right")
+					}
+				}
+			})
+		})
 	},
 });
