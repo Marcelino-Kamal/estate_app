@@ -149,7 +149,6 @@ doc_events = {
             "validate":"estate_app.estate_house.doctype.property.event.validate",
             "on_update":"estate_app.estate_house.doctype.property.event.on_update",
             "after_insert":"estate_app.estate_house.doctype.property.event.afterInsert"
-		
 	}
 }
 

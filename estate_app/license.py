@@ -6,8 +6,8 @@ def validate_license_on_login(login_manager):
     
     if frappe.session.user == "Administrator":
         return
-    if not frappe.session.user or frappe.session.user in ("Guest",):
-        return
+    # if not frappe.session.user or frappe.session.user in ("Guest","Administrator"):
+    #     return
     else:
         # Get the active license
         license_doc = frappe.get_all("License Config", filters={"active": 1}, limit=1)
@@ -25,7 +25,7 @@ def validate_license_on_login(login_manager):
             filters={
                 "enabled": 1,
                 "user_type": "System User",
-                "name": ["not in", ["Administrator", "Guest"]]
+                "name": ["not in", ["Guest","Administrator"]]
             },
             fields=["name"]
         )
